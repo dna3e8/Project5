@@ -19,8 +19,8 @@ public class CartItem
     public string Display()
     {
         string displayString = 
-            Product.Name + " (" + Quantity.ToString()
-            + " at " + Product.UnitPrice.ToString("c") + " each)";
+            Product.PName + " (" + Quantity.ToString()
+            + " at " + Product.Price.ToString("c") + " each)";
 
         return displayString;
     }

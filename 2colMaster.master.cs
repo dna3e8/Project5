@@ -9,6 +9,11 @@ public partial class _2colMaster : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Request.IsSecureConnection)
+        {
+            string url = Request.Url.ToString().Replace("https:", "http:");
+            Response.Redirect(url);
+        }
 
     }
 }
